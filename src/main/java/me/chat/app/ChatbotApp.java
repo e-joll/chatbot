@@ -43,7 +43,7 @@ public class ChatbotApp {
         mainPanel.add(chatPanel, BorderLayout.CENTER);
 
         // Création du MessageInput en bas
-        MessageInput messageInput = new MessageInput();
+        MessageInput messageInput = new MessageInput(chatPanel);
         mainPanel.add(messageInput, BorderLayout.SOUTH);
 
         // Ajout du mainPanel à la fenêtre
