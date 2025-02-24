@@ -22,6 +22,9 @@ public class ChatPanel extends JPanel {
         scrollPane.setBorder(null);
         scrollPane.getViewport().setOpaque(false);
         scrollPane.setOpaque(false);
+        scrollPane.getVerticalScrollBar().setPreferredSize(new Dimension(8, 0));
+        scrollPane.getVerticalScrollBar().setUnitIncrement(ModernScrollBarUI.SCROLL_SPEED);
+        scrollPane.getVerticalScrollBar().setUI(new ModernScrollBarUI());
 
         add(scrollPane, BorderLayout.CENTER);
     }
@@ -31,5 +34,11 @@ public class ChatPanel extends JPanel {
         messagesPanel.add(message);
         messagesPanel.revalidate();
         messagesPanel.repaint();
+
+        scrollToBottom();
+    }
+
+    private void scrollToBottom() {
+        SwingUtilities.invokeLater(() -> scrollPane.getVerticalScrollBar().setValue(scrollPane.getVerticalScrollBar().getMaximum()));
     }
 }
