@@ -26,7 +26,7 @@ public class ChatItem extends JPanel {
             )
         ));
 
-        // TODO: revoir redimensionnement image
+        // TODO: revoir taille image + affichage correct de l'image
         // Taille souhaitée pour l'icône
         int iconWidth = 50;  // Largeur en pixels
         int iconHeight = 50; // Hauteur en pixels
@@ -46,9 +46,6 @@ public class ChatItem extends JPanel {
 
         add(iconPanel, BorderLayout.WEST);
 
-//        System.out.println("Image2 width: " + resizedIcon.getIconWidth());
-//        System.out.println("Image2 height: " + resizedIcon.getIconHeight());
-
         // JTextPane pour les messages
         JTextPane textPane = new JTextPane();
         textPane.setEditorKit(new AutoWrapText());
@@ -62,11 +59,10 @@ public class ChatItem extends JPanel {
         int minHeight = iconHeight + 20; // +20 pour le padding
         int textHeight = textPane.getPreferredSize().height + 20;
         int finalHeight = Math.max(minHeight, textHeight);
-//        System.out.println("textHeight: " + textHeight);
+
 
         setPreferredSize(new Dimension(0, finalHeight)); // Largeur flexible
         setMaximumSize(new Dimension(Integer.MAX_VALUE, finalHeight)); // Permet l'extension
-//        System.out.println("finalHeight: " + finalHeight);
 
         // 📌 **Ajout d'un listener pour recalculer la hauteur**
         addComponentListener(new ComponentAdapter() {

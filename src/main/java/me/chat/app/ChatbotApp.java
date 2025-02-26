@@ -1,6 +1,7 @@
 package me.chat.app;
 
 import me.chat.components.ChatItem;
+import me.chat.components.ChatItem2;
 import me.chat.components.ChatPanel;
 import me.chat.components.MessageInput;
 
@@ -27,13 +28,13 @@ public class ChatbotApp {
         ChatPanel chatPanel = new ChatPanel();
 
         // Ajout d'exemples d'éléments
-        ChatItem message1 = new ChatItem("Bonjour, comment vas-tu ?", "assistant");
-        ChatItem message2 = new ChatItem("Ceci est un message long qui peut s'afficher sur plusieurs lignes si besoin. Ceci est un message long qui peut s'afficher sur plusieurs lignes si besoin.", "user");
-        ChatItem message3 = new ChatItem("Bonjour, comment vas-tu ?", "assistant");
-        ChatItem message4 = new ChatItem("Ceci est un message long qui peut s'afficher sur plusieurs lignes si besoin. Ceci est un message long qui peut s'afficher sur plusieurs lignes si besoin.", "user");
-        ChatItem message5 = new ChatItem("Praesent volutpat eleifend ligula. Cras pretium mollis leo, in cursus justo imperdiet vel. Proin lacinia dapibus blandit. Morbi vehicula pulvinar ligula. Donec odio arcu, rhoncus a purus a, tincidunt vehicula lacus. Nulla facilisi. Etiam et cursus tortor. Nam ullamcorper ornare elit, tempus cursus justo molestie et. Mauris at accumsan risus, at faucibus massa. Ut sit amet diam felis. Aliquam eu massa eget tortor vehicula mattis.\n" +
+        ChatItem2 message1 = new ChatItem2("Bonjour, comment vas-tu ?", "INIT");
+        ChatItem2 message2 = new ChatItem2("Ceci est un message long qui peut s'afficher sur plusieurs lignes si besoin. Ceci est un message long qui peut s'afficher sur plusieurs lignes si besoin.", "USER");
+        ChatItem2 message3 = new ChatItem2("Bonjour, comment vas-tu ?", "ASSISTANT");
+        ChatItem2 message4 = new ChatItem2("Ceci est un message long qui peut s'afficher sur plusieurs lignes si besoin. Ceci est un message long qui peut s'afficher sur plusieurs lignes si besoin.", "USER");
+        ChatItem2 message5 = new ChatItem2("Praesent volutpat eleifend ligula. Cras pretium mollis leo, in cursus justo imperdiet vel. Proin lacinia dapibus blandit. Morbi vehicula pulvinar ligula. Donec odio arcu, rhoncus a purus a, tincidunt vehicula lacus. Nulla facilisi. Etiam et cursus tortor. Nam ullamcorper ornare elit, tempus cursus justo molestie et. Mauris at accumsan risus, at faucibus massa. Ut sit amet diam felis. Aliquam eu massa eget tortor vehicula mattis.\n" +
                 "\n" +
-                "Morbi at tellus sit amet mauris aliquet gravida. Nunc maximus sit amet tortor in hendrerit. Curabitur sit amet orci at ligula accumsan faucibus cursus sit amet nisi. Nam feugiat elementum ante, ac laoreet nisi vehicula ut. Nunc accumsan varius maximus. Aenean imperdiet libero eu nisi congue blandit. Nam non suscipit ex. In finibus id est vel ornare. Ut lobortis hendrerit pulvinar. Quisque aliquet risus id laoreet pellentesque. Praesent euismod nulla ut mi dignissim, at egestas metus ornare. Aenean lacinia gravida ipsum, nec fermentum diam sollicitudin eget. Duis commodo dui ut pretium ultrices. Quisque quis ligula molestie enim tincidunt blandit. Aliquam interdum, urna et sollicitudin porta, mauris felis placerat mi, in tincidunt risus nisl eget nulla.", "assistant");
+                "Morbi at tellus sit amet mauris aliquet gravida. Nunc maximus sit amet tortor in hendrerit. Curabitur sit amet orci at ligula accumsan faucibus cursus sit amet nisi. Nam feugiat elementum ante, ac laoreet nisi vehicula ut. Nunc accumsan varius maximus. Aenean imperdiet libero eu nisi congue blandit. Nam non suscipit ex. In finibus id est vel ornare. Ut lobortis hendrerit pulvinar. Quisque aliquet risus id laoreet pellentesque. Praesent euismod nulla ut mi dignissim, at egestas metus ornare. Aenean lacinia gravida ipsum, nec fermentum diam sollicitudin eget. Duis commodo dui ut pretium ultrices. Quisque quis ligula molestie enim tincidunt blandit. Aliquam interdum, urna et sollicitudin porta, mauris felis placerat mi, in tincidunt risus nisl eget nulla.", "ASSISTANT");
         chatPanel.addMessage(message1);
         chatPanel.addMessage(message2);
         chatPanel.addMessage(message3);

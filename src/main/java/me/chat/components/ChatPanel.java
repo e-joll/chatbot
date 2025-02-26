@@ -1,5 +1,7 @@
 package me.chat.components;
 
+import me.chat.components.ui.ModernScrollBarUI;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -29,7 +31,8 @@ public class ChatPanel extends JPanel {
         add(scrollPane, BorderLayout.CENTER);
     }
 
-    public void addMessage(ChatItem message) {
+    public void addMessage(ChatItem2 message) {
+        messagesPanel.add(Box.createRigidArea(new Dimension(0, 10)));
         message.setAlignmentX(Component.LEFT_ALIGNMENT);
         messagesPanel.add(message);
         messagesPanel.revalidate();

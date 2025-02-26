@@ -1,4 +1,4 @@
-package me.chat.components;
+package me.chat.components.ui;
 
 import javax.swing.*;
 import javax.swing.plaf.basic.BasicScrollBarUI;
@@ -6,7 +6,7 @@ import java.awt.*;
 
 public class ModernScrollBarUI extends BasicScrollBarUI {
 
-    static final int SCROLL_SPEED = 20;
+    static public final int SCROLL_SPEED = 20;
 
     @Override
     protected void configureScrollBarColors() {
