@@ -1,12 +1,9 @@
 package me.chat.components;
 
-import me.chat.utils.AutoWrapText;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
-import java.awt.geom.Area;
 import java.util.Objects;
 
 public class ChatItem2 extends JPanel {

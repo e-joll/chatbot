@@ -4,18 +4,13 @@ import me.chat.utils.AutoWrapText;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.Objects;
 
-
-
 public class MessageInput extends JPanel {
 
-//    private final JTextArea messageInput;
     private final JTextPane messageInput;
     private final JButton sendButton;
     private final ChatPanel chatPanel;
@@ -82,7 +77,7 @@ public class MessageInput extends JPanel {
     private void sendMessage() {
         String text = messageInput.getText().trim();
         if (!text.isEmpty()) {
-            ChatItem2 message = new ChatItem2(text, "user");
+            ChatItem2 message = new ChatItem2(text, "USER");
             chatPanel.addMessage(message);
             messageInput.setText("");
         }
