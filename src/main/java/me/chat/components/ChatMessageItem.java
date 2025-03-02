@@ -43,7 +43,7 @@ public class ChatMessageItem extends JTextPane {
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         g2.setColor(Color.LIGHT_GRAY);
 
-         if (role.equals(ChatItem2.ChatItemType.USER.toString())) {
+        if (role.equals(ChatItem2.ChatItemType.USER.toString())) {
             g2.fillRoundRect(0, 0, getWidth(), getHeight(), radius, radius);
         }
 
