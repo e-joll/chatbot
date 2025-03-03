@@ -1,6 +1,7 @@
 package me.chat.components;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
@@ -12,7 +13,7 @@ public class ChatItem2 extends JPanel {
         INIT, ASSISTANT, USER
     }
 
-    private final int iconHeight = 50;
+    private final int iconHeight = 52;
 
     public ChatItem2(String message, String role) {
         setLayout(new BorderLayout(10, 10));
@@ -48,17 +49,24 @@ public class ChatItem2 extends JPanel {
             setMaximumSize(new Dimension(Integer.MAX_VALUE, textHeight));
         }
 
-//        JPanel textWrapper = new JPanel(new FlowLayout(FlowLayout.LEFT, 0, 0));
-//        textWrapper.add(textPane);
-//        textWrapper.setOpaque(false);
+        JPanel textWrapper = new JPanel(new BorderLayout());
+        textWrapper.add(textPane, BorderLayout.CENTER);
+        textWrapper.setOpaque(false);
 
         JPanel textContainer = new JPanel();
         textContainer.setLayout(new BorderLayout());
-        textContainer.add(textPane, BorderLayout.SOUTH);
+//        textContainer.setBorder(new LineBorder(Color.red));
+        if (role.equals(ChatItemType.INIT.toString())) {
+            textContainer.add(textWrapper, BorderLayout.SOUTH);
+        } else {
+            textContainer.add(textWrapper, BorderLayout.CENTER);
+        }
         textContainer.setOpaque(false);
 
         add(iconPanel, BorderLayout.WEST);
         add(textContainer, BorderLayout.CENTER);
+
+//        setBorder(new LineBorder(Color.black));
 
         // Ajout d'un listener pour recalculer la hauteur
         addComponentListener(new ComponentAdapter() {
